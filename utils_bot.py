@@ -103,5 +103,5 @@ async def get_shortlink(link):
                     return f'https://playdisk.xyz/st?api={SHORTENER_API}&url={link}'
 
     except Exception as e:
-        logger.error(e)
+        LOGGER.error(e)
         return f'https://playdisk.xyz/st?api={SHORTENER_API}&url={link}'
