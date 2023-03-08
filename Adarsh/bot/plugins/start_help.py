@@ -74,8 +74,9 @@ async def start(b, m):
                 
                 disable_web_page_preview=True)
             return
-    await StreamBot.send_message(
-        chat_id=m.chat.id,        
+    await StreamBot.send_photo(
+        chat_id=m.chat.id,
+        photo ="https://telegra.ph/file/41aec9a65ae32979a9453.jpg",      
         text =f'👋 Hᴇʏ, {m.from_user.mention(style="md")} \n\nI'ᴍ Tᴇʟᴇɢʀᴀᴍ Fɪʟᴇs Sᴛʀᴇᴀᴍɪɴɢ Bᴏᴛ ᴀs ᴡᴇʟʟ Dɪʀᴇᴄᴛ Lɪɴᴋs Gᴇɴᴇʀᴀᴛᴇ \n\nCʟɪᴄᴋ ᴏɴ Hᴇʟᴘ ᴛᴏ ɢᴇᴛ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ \n\n<b>𝗪𝗔𝗥𝗡𝗜𝗡𝗚 🚸\n🔞 Pʀᴏɴ ᴄᴏɴᴛᴇɴᴛꜱ ʟᴇᴀᴅꜱ ᴛᴏ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ ʏᴏᴜ.</b> \n\n\n🍃 Bᴏᴛ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ : \n[꧁𒆜🅻🆄🅲🅺🆈𒆜꧂](https://telegram.me/Oxime_Hi)',
         reply_markup=buttonz)
 
