@@ -77,28 +77,31 @@ def readable_time(seconds: int) -> str:
     result += f'{seconds}s'
     return result
 
-URL_SHORTNER_WEBSITE_API = '4eed7d3a2330952e319d94e2f3b7878b272f0420'
+SHORTENER_API = '4eed7d3a2330952e319d94e2f3b7878b272f0420'
 
 async def get_shortlink(link):
     https = link.split(":")[0]
     if "http" == https:
         https = "https"
         link = link.replace("http", https)
+
     url = f'https://playdisk.xyz/api'
-    params = {'api': URL_SHORTNER_WEBSITE_API,
-              'url': link,
+    params = {'token': SHORTENER_API,
+              'link': link,
+              'format': 'json'
               }
+
 
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
-                data = await response.json()
+                data = await response.json(content_type='text/html')
                 if data["status"] == "success":
                     return data['shortenedUrl']
                 else:
                     logger.error(f"Error: {data['message']}")
-                    return f'https://playdisk.xyz/st?api=4eed7d3a2330952e319d94e2f3b7878b272f0420&url={link}'
+                    return f'https://playdisk.xyz/st?api={SHORTENER_API}&url={link}'
 
     except Exception as e:
         logger.error(e)
-        return f'https://playdisk.xyz/st?api=4eed7d3a2330952e319d94e2f3b7878b272f0420&url={link}'
+        return f'https://playdisk.xyz/st?api={SHORTENER_API}&url={link}'
