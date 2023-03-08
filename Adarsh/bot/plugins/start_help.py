@@ -76,7 +76,7 @@ async def start(b, m):
             return
     await StreamBot.send_message(
         chat_id=m.chat.id,        
-        text ="👋 Hᴇʏ, {m.from_user.mention(style="md")} \n\nI'ᴍ Tᴇʟᴇɢʀᴀᴍ Fɪʟᴇs Sᴛʀᴇᴀᴍɪɴɢ Bᴏᴛ ᴀs ᴡᴇʟʟ Dɪʀᴇᴄᴛ Lɪɴᴋs Gᴇɴᴇʀᴀᴛᴇ \n\nCʟɪᴄᴋ ᴏɴ Hᴇʟᴘ ᴛᴏ ɢᴇᴛ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ \n\n<b>𝗪𝗔𝗥𝗡𝗜𝗡𝗚 🚸\n🔞 Pʀᴏɴ ᴄᴏɴᴛᴇɴᴛꜱ ʟᴇᴀᴅꜱ ᴛᴏ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ ʏᴏᴜ.</b> \n\n\n🍃 Bᴏᴛ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ : \n[꧁𒆜🅻🆄🅲🅺🆈𒆜꧂](https://telegram.me/Oxime_Hi)",
+        text =f'👋 Hᴇʏ, {m.from_user.mention(style="md")} \n\nI'ᴍ Tᴇʟᴇɢʀᴀᴍ Fɪʟᴇs Sᴛʀᴇᴀᴍɪɴɢ Bᴏᴛ ᴀs ᴡᴇʟʟ Dɪʀᴇᴄᴛ Lɪɴᴋs Gᴇɴᴇʀᴀᴛᴇ \n\nCʟɪᴄᴋ ᴏɴ Hᴇʟᴘ ᴛᴏ ɢᴇᴛ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ \n\n<b>𝗪𝗔𝗥𝗡𝗜𝗡𝗚 🚸\n🔞 Pʀᴏɴ ᴄᴏɴᴛᴇɴᴛꜱ ʟᴇᴀᴅꜱ ᴛᴏ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ ʏᴏᴜ.</b> \n\n\n🍃 Bᴏᴛ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ : \n[꧁𒆜🅻🆄🅲🅺🆈𒆜꧂](https://telegram.me/Oxime_Hi)',
         reply_markup=buttonz)
 
 
