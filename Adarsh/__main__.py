@@ -26,6 +26,7 @@ ppath = "Adarsh/bot/plugins/*.py"
 files = glob.glob(ppath)
 
 loop = asyncio.get_event_loop()
+StreamBot.start()
 
 
 async def start_services():
@@ -88,4 +89,4 @@ if __name__ == '__main__':
 
 
 
-StreamBot.start()
+
